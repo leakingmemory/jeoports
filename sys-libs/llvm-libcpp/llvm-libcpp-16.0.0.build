@@ -1,0 +1,26 @@
+{
+	"distfiles": {
+		"llvm-project-16.0.0.src.tar.xz": {
+			"src": [
+				"https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.0/llvm-project-16.0.0.src.tar.xz"
+			]
+		}
+	},
+	"builddir": "llvm-project-16.0.0.src",
+	"tooling": "cmake",
+	"cxxflags": " -D_LIBCPP_PROVIDES_DEFAULT_RUNE_TABLE ",
+	"buildTargets": ["cxx", "cxxabi", "unwind"],
+	"installTargets": ["install-cxx", "install-cxxabi", "install-unwind"],
+	"configure": {
+		"defaultParameters": false,
+		"parameters": [
+			"-S", "../llvm-project-16.0.0.src/runtimes",
+			"-DCMAKE_INSTALL_PREFIX=/",
+			"-DLIBCXX_INCLUDE_BENCHMARKS=Off",
+			"-DLLVM_ENABLE_RUNTIMES=libcxx;libcxxabi;libunwind"
+		]
+	},
+	"patches": [
+		"musl-strtoll-rem-locale.patch"
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"distfiles": {
+		"musl-1.2.3.tar.gz": {
+			"src": [
+				"https://musl.libc.org/releases/musl-1.2.3.tar.gz"
+			]
+		}
+	},
+	"builddir": "musl-1.2.3",
+	"prefix": "/",
+	"configure": {
+		"parameters": [
+			"--exec-prefix=/usr",
+			"--includedir=/usr/include"
+		]
+	}
+}

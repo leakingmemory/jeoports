@@ -1,0 +1,23 @@
+{
+	"distfiles": {
+		"bash-5.2.15.tar.gz": {
+			"src": [
+				"https://mirrors.ibiblio.org/gnu/bash/bash-5.2.15.tar.gz"
+			]
+		}
+	},
+	"builddir": "bash-5.2.15",
+	"configure": {
+		"parameters": [
+			"--without-bash-malloc"
+		]
+	},
+	"static": {
+		"configure": {
+			"parameters": [
+				"--enable-static-link"
+			]
+		}
+	},
+	"prefix": "/"
+}

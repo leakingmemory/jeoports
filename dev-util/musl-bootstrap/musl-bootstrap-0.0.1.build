@@ -1,0 +1,13 @@
+{
+	"builddir": "musl-bootstrap-0.0.1",
+	"tooling": "bootstrap",
+	"libc": "sys-libs/musl/1.2.3",
+	"static": [
+		"app-shells/bash/5.2.15",
+		"sys-libs/llvm-libcpp/16.0.0",
+		"sys-libs/linux-headers/0.0.1"
+	],
+	"bootstrap": [
+		"sys-libs/llvm-libcpp/16.0.0"
+	]
+}

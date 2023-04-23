@@ -1,0 +1,18 @@
+{
+	"distfiles": {
+		"ncurses-6.4.tar.gz" : {
+			"src": [
+				"https://ftp.gnu.org/gnu/ncurses/ncurses-6.4.tar.gz"
+			]
+		}
+	},
+	"builddir": "ncurses-6.4",
+	"prefix": "/",
+	"configure": {
+		"parameters": [
+			"--includedir=/usr/include",
+			"--with-shared",
+			"--with-termlib"
+		]
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"cmake-3.26.2.tar.gz": {
+			"src": [
+				"https://github.com/Kitware/CMake/releases/download/v3.26.2/cmake-3.26.2.tar.gz"
+			]
+		}
+	},
+	"builddir": "cmake-3.26.2"
+}
