@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"nghttp2-1.52.0.tar.xz": {
+			"src": [
+				"https://github.com/nghttp2/nghttp2/releases/download/v1.52.0/nghttp2-1.52.0.tar.xz"
+			]
+		}
+	},
+	"builddir": "nghttp2-1.52.0"
+}

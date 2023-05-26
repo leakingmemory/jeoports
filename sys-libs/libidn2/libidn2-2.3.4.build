@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"libidn2-2.3.4.tar.gz": {
+			"src": [
+				"https://gitlab.com/libidn/libidn2/uploads/54f6d239283bbdc75d4dbd732ced04e4/libidn2-2.3.4.tar.gz"
+			]
+		}
+	},
+	"builddir": "libidn2-2.3.4"
+}

@@ -1,0 +1,19 @@
+{
+	"distfiles": {
+		"icu4c-73_1-src.tar.gz": {
+			"src": [
+				"https://github.com/unicode-org/icu/releases/download/release-73-1/icu4c-73_1-src.tgz"
+			]
+		}
+	},
+	"builddir": "icu/source",
+	"configure": {
+		"parameters": [
+			"--with-debug"
+		]
+	},
+	"sysroot": {
+		"cxxflags": " -D_LIBCPP_PROVIDES_DEFAULT_RUNE_TABLE -Wl,-nostdlib -nostdlib -Wl,-lc++ -Wl,-lc -Wl,-lrt --rtlib=compiler-rt -fuse-ld=lld -Wl,{SYSROOT}/lib/crti.o -Wl,{SYSROOT}/lib/crt1.o -Wl,{SYSROOT}/lib/crtn.o"
+	},
+	"requiresClang": true
+}

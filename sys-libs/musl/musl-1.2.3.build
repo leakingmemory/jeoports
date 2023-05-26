@@ -11,7 +11,8 @@
 	"configure": {
 		"parameters": [
 			"--exec-prefix=/usr",
-			"--includedir=/usr/include"
+			"--includedir=/usr/include",
+			"--enable-debug"
 		]
 	}
 }

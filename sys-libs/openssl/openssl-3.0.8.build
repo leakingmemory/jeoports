@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"openssl-3.0.8.tar.gz": {
+			"src": [
+				"https://www.openssl.org/source/openssl-3.0.8.tar.gz"
+			]
+		}
+	},
+	"builddir": "openssl-3.0.8"
+}

@@ -9,7 +9,7 @@
 	"builddir": "llvm-project-16.0.0.src",
 	"tooling": "cmake",
 	"requiresClang": true,
-	"cxxflags": " --rtlib=compiler-rt -fuse-ld=lld ",
+	"cxxflags": " -D_LIBCPP_PROVIDES_DEFAULT_RUNE_TABLE --rtlib=compiler-rt -fuse-ld=lld ",
 	"buildTargets": ["cxx", "cxxabi", "unwind"],
 	"installTargets": ["install-cxx", "install-cxxabi", "install-unwind"],
 	"configure": {
@@ -18,7 +18,6 @@
 			"-S", "../llvm-project-16.0.0.src/runtimes",
 			"-DCMAKE_INSTALL_PREFIX=/",
 			"-DLIBCXX_INCLUDE_BENCHMARKS=Off",
-			"-DLIBCXX_HAS_MUSL_LIBC=On",
 			"-DLIBCXXABI_USE_LLVM_UNWINDER=On",
 			"-DLIBCXXABI_USE_COMPILER_RT=On",
 			"-DLIBUNWIND_USE_COMPILER_RT=On",

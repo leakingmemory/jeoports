@@ -1,0 +1,15 @@
+{
+	"distfiles": {
+		"curl-8.0.1.tar.gz": {
+			"src": [
+				"https://curl.se/download/curl-8.0.1.tar.gz"
+			]
+		}
+	},
+	"builddir": "curl-8.0.1",
+	"configure": {
+		"parameters": [
+			"--with-openssl"
+		]
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"distfiles": {
+		"libpsl-0.21.2.tar.gz": {
+			"src": [
+				"https://github.com/rockdaboot/libpsl/releases/download/0.21.2/libpsl-0.21.2.tar.gz"
+			]
+		}
+	},
+	"builddir": "libpsl-0.21.2",
+	"requiresClang": true,
+	"cxxflags": " -rtlib=compiler-rt -fuse-ld=lld ",
+	"ldflags": " -ldl ",
+	"configure": {
+		"parameters": [
+			"--disable-silent-rules",
+			"--enable-runtime=libicu"
+		]
+	},
+	"sysroot": {
+		"ldflags": " -Wl,-nostdlib -nostdlib -Wl,-lc++ -Wl,-lc -Wl,-lrt -Wl,-lunwind --rtlib=compiler-rt -fuse-ld=lld -Wl,{SYSROOT}/lib/crti.o -Wl,{SYSROOT}/lib/crt1.o -Wl,{SYSROOT}/lib/crtn.o ",
+		"configure": {
+			"parameters": [
+				"--with-sysroot={SYSROOT}",
+				"--disable-shared"
+			]
+		}
+	}
+}

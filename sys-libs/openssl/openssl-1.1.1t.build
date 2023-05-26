@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"openssl-1.1.1t.tar.gz": {
+			"src": [
+				"https://www.openssl.org/source/openssl-1.1.1t.tar.gz"
+			]
+		}
+	},
+	"builddir": "openssl-1.1.1t"
+}

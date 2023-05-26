@@ -2,12 +2,24 @@
 	"builddir": "musl-bootstrap-0.0.1",
 	"tooling": "bootstrap",
 	"libc": "sys-libs/musl/1.2.3",
+	"libcppHeaderBuild": "sys-libs/llvm-libcpp-glibc/16.0.0",
+	"libcpp": "sys-libs/llvm-libcpp/16.0.0",
 	"static": [
+		"sys-libs/linux-headers/0.0.1",
 		"app-shells/bash/5.2.15",
-		"sys-libs/llvm-libcpp/16.0.0",
-		"sys-libs/linux-headers/0.0.1"
+		"sys-libs/nlohmann-json/3.11.2"
 	],
 	"bootstrap": [
-		"sys-libs/llvm-libcpp/16.0.0"
+		"sys-libs/libicu/73.1",
+		"sys-libs/libpsl/0.21.2",
+		"sys-libs/openssl/3.1.0",
+		"sys-libs/libevent/2.1.12",
+		"sys-libs/nghttp2/1.52.0",
+		"sys-libs/libidn2/2.3.4",
+		"sys-libs/curl/8.0.1",
+		"sys-libs/zlib/1.2.13",
+		"dev-util/cmake/3.26.2",
+		"sys-apps/buildmanager/0.0.2",
+		"sys-libs/zstd/1.5.5"
 	]
 }

@@ -1,20 +1,16 @@
 {
 	"distfiles": {
-		"cmake-3.26.2.tar.gz": {
+		"buildmanager-0.0.2.tar.gz": {
 			"src": [
-				"https://github.com/Kitware/CMake/releases/download/v3.26.2/cmake-3.26.2.tar.gz"
+				"https://github.com/leakingmemory/buildmanager/archive/refs/tags/0.0.2.tar.gz"
 			]
 		}
 	},
-	"cxxflags": " -Wno-unused-command-line-argument ",
-	"builddir": "cmake-3.26.2",
+	"tooling": "cmake",
+	"builddir": "buildmanager-0.0.2",
 	"requiresClang": true,
-	"configure": {
-		"parameters": [
-			"--system-curl"
-		]
-	},
 	"sysroot": {
+		"cmake": "{SYSROOT}/usr/bin/cmake",
 		"ldflags": " -Wl,-nostdlib -nostdlib -Wl,-lc++ -Wl,-lc -Wl,-lrt -Wl,-lunwind --rtlib=compiler-rt -fuse-ld=lld -Wl,{SYSROOT}/lib/crti.o -Wl,{SYSROOT}/lib/crt1.o -Wl,{SYSROOT}/lib/crtn.o "
 	}
 }
