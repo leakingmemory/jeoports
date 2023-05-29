@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"make-4.4.1.tar.gz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz"
+			]
+		}
+	},
+	"builddir": "make-4.4.1"
+}

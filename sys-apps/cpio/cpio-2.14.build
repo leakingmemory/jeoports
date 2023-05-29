@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"cpio-2.14.tar.gz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/cpio/cpio-2.14.tar.gz"
+			]
+		}
+	},
+	"builddir": "cpio-2.14"
+}

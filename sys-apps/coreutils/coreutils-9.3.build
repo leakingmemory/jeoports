@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"coreutils-9.3.tar.xz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/coreutils/coreutils-9.3.tar.xz"
+			]
+		}
+	},
+	"builddir": "coreutils-9.3"
+}

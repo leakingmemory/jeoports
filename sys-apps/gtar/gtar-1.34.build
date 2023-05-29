@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"tar-1.34.tar.xz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/tar/tar-1.34.tar.xz"
+			]
+		}
+	},
+	"builddir": "tar-1.34"
+}

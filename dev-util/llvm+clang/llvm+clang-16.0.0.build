@@ -1,0 +1,70 @@
+{
+	"distfiles": {
+		"llvm-project-16.0.0.src.tar.xz": {
+			"src": [
+				"https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.0/llvm-project-16.0.0.src.tar.xz"
+			]
+		}
+	},
+	"builddir": "llvm-project-16.0.0.src",
+	"tooling": "cmake",
+	"cxxflags": " -D_LIBCPP_PROVIDES_DEFAULT_RUNE_TABLE ",
+	"requiresClang": true,
+	"configure": {
+		"defaultParameters": false,
+		"parameters": [
+			"-S", "../llvm-project-16.0.0.src/llvm",
+			"-DCMAKE_INSTALL_PREFIX=/usr",
+			"-DLIBCXX_INCLUDE_BENCHMARKS=Off",
+			"-DLLVM_USE_LINKER=lld",
+			"-DCMAKE_BUILD_TYPE=Release",
+			"-DLLVM_TARGETS_TO_BUILD=X86",
+			"-DBUILD_SHARED_LIBS=On",
+			"-DLLVM_ENABLE_PROJECTS=clang;lld"
+		]
+	},
+	"static": {
+		"configure": {
+			"overrides": true,
+			"parameters": [
+			        "-S", "../llvm-project-16.0.0.src/llvm",
+                        	"-DCMAKE_INSTALL_PREFIX=/usr",
+                        	"-DLIBCXX_INCLUDE_BENCHMARKS=Off",
+                        	"-DLLVM_USE_LINKER=lld",
+                        	"-DCMAKE_BUILD_TYPE=Release",
+                        	"-DLLVM_TARGETS_TO_BUILD=X86",
+				"-DLLVM_ENABLE_BINDINGS=OFF",
+				"-DLLVM_ENABLE_LIBXML2=OFF",
+				"-DLLVM_ENABLE_LTO=OFF",
+				"-DLLVM_ENABLE_OCAMLDOC=OFF",
+				"-DLLVM_ENABLE_PIC=OFF",
+				"-DLLVM_ENABLE_TERMINFO=OFF",
+				"-DLLVM_ENABLE_WARNINGS=OFF",
+				"-DLLVM_ENABLE_Z3_SOLVER=OFF",
+				"-DLLVM_HAVE_LIBXAR=OFF",
+				"-DLLVM_INCLUDE_BENCHMARKS=OFF",
+				"-DLLVM_INCLUDE_TESTS=OFF",
+				"-DLLVM_TOOL_REMARKS_SHLIB_BUILD=OFF",
+				"-DLLVM_ENABLE_LIBCXX=ON",
+				"-DLLVM_ENABLE_LLD=ON",
+				"-DLLVM_ENABLE_PROJECTS=clang;lld"
+			]
+		}
+	},
+	"sysroot": {
+		"cmake": "{SYSROOT}/usr/bin/cmake",
+		"ldflags": " -Wl,-nostdlib -nostdlib -Wl,-lc++ -Wl,-lc -Wl,-lrt -Wl,-lunwind --rtlib=compiler-rt -fuse-ld=lld ",
+		"cxxflags": " -fPIC ",
+		"configure": {
+			"parameters": [
+				"-DLLVM_EXE_LINKER_FLAGS_f= -Wl,-nostdlib -Wl,-lc++ -Wl,-lc -Wl,-lrt -Wl,-lunwind --rtlib=compiler-rt -fuse-ld=lld -Wl,{SYSROOT}/lib/crti.o -Wl,{SYSROOT}/lib/crt1.o -Wl,{SYSROOT}/lib/crtn.o "
+			]
+		},
+		"env": {
+			"LLVM_EXE_LINKER_FLAGS": " -Wl,-nostdlib -Wl,-lc++ -Wl,-lc -Wl,-lrt -Wl,-lunwind --rtlib=compiler-rt -fuse-ld=lld -Wl,{SYSROOT}/lib/crti.o -Wl,{SYSROOT}/lib/crt1.o -Wl,{SYSROOT}/lib/crtn.o "
+		}
+	},
+	"patches": [
+		"patch-exe-linker-flags.patch"
+	]
+}

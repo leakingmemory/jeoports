@@ -1,0 +1,13 @@
+--- a/llvm/CMakeLists.txt	2023-05-26 08:32:10.569189444 +0200
++++ b/llvm/CMakeLists.txt	2023-05-26 08:37:31.276044362 +0200
+@@ -1056,6 +1056,10 @@
+     "${CMAKE_MODULE_LINKER_FLAGS} -Wl,-lto_library -Wl,${DARWIN_LTO_LIBRARY}")
+ endif()
+ 
++IF(DEFINED ENV{LLVM_EXE_LINKER_FLAGS})
++	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} $ENV{LLVM_EXE_LINKER_FLAGS}")
++ENDIF()
++
+ # Build with _XOPEN_SOURCE on AIX, as stray macros in _ALL_SOURCE mode tend to
+ # break things. In this case we need to enable the large-file API as well.
+ if (UNIX AND ${CMAKE_SYSTEM_NAME} MATCHES "AIX")
