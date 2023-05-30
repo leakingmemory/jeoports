@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"xz-5.4.3.tar.gz": {
+			"src": [
+				"https://tukaani.org/xz/xz-5.4.3.tar.gz"
+			]
+		}
+	},
+	"builddir": "xz-5.4.3"
+}

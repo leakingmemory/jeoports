@@ -1,0 +1,4 @@
+{
+	"tooling": "static-files",
+	"builddir": "musl-root-0.0.1"
+}

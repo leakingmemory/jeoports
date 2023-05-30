@@ -5,6 +5,7 @@
 	"libcppHeaderBuild": "sys-libs/llvm-libcpp-glibc/16.0.0",
 	"libcpp": "sys-libs/llvm-libcpp/16.0.0",
 	"static": [
+		"dev-util/musl-root/0.0.1",
 		"sys-libs/linux-headers/0.0.1",
 		"app-shells/bash/5.2.15",
 		"sys-libs/nlohmann-json/3.11.2"
@@ -26,6 +27,8 @@
 		"sys-apps/gzip/1.12",
 		"sys-apps/cpio/2.14",
 		"sys-apps/coreutils/9.3",
+		"sys-apps/sed/4.9",
+		"sys-apps/xz/5.4.3",
 		"dev-util/llvm+clang/16.0.0"
 	]
 }

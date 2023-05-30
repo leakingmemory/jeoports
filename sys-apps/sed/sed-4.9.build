@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"sed-4.9.tar.xz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/sed/sed-4.9.tar.xz"
+			]
+		}
+	},
+	"builddir": "sed-4.9"
+}
