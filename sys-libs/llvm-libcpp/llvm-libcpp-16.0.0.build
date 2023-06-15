@@ -9,7 +9,7 @@
 	"builddir": "llvm-project-16.0.0.src",
 	"tooling": "cmake",
 	"requiresClang": true,
-	"cxxflags": " --rtlib=compiler-rt -fuse-ld=lld ",
+	"cxxflags": " --rtlib=compiler-rt -fuse-ld=lld -nostdinc++ ",
 	"buildTargets": ["cxx", "cxxabi", "unwind"],
 	"installTargets": ["install-cxx", "install-cxxabi", "install-unwind"],
 	"configure": {
@@ -28,5 +28,8 @@
 	"patches": [
 		"musl-strtoll-rem-locale.patch",
 		"clang-only-platform-remove-gcc-and-gcc_s.patch"
-	]
+	],
+	"sysroot": {
+		"ldflags": "-nostdlib"
+	}
 }

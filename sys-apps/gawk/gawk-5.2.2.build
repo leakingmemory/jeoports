@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"gawk-5.2.2.tar.xz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/gawk/gawk-5.2.2.tar.xz"
+			]
+		}
+	},
+	"builddir": "gawk-5.2.2"
+}

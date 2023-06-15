@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"patch-2.7.6.tar.xz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz"
+			]
+		}
+	},
+	"builddir": "patch-2.7.6"
+}

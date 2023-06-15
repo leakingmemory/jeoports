@@ -1,0 +1,7 @@
+#ifndef LINUX_SOCKIOS_H
+#define LINUX_SOCKIOS_H
+
+#define SIOCPROTOPRIVATE (0x89E0)
+#define SIOCDEVPRIVATE (0x89F0)
+
+#endif

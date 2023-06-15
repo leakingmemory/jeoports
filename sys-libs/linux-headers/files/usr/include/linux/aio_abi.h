@@ -1,12 +1,15 @@
 #ifndef LINUX_AIO_ABI_H
 #define LINUX_AIO_ABI_H
 
+#include <stdint.h>
 #include <linux/types.h>
 
 typedef __kernel_ulong_t aio_context_t;
 
 #define IOCB_CMD_PREAD (0)
 #define IOCB_CMD_PWRITE (1)
+#define IOCB_CMD_PREADV (7)
+#define IOCB_CMD_PWRITEV (8)
 
 #define IOCB_FLAG_RESFD (1)
 #define IOCB_FLAG_IOPRIO (2)

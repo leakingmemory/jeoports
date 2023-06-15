@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"grep-3.11.tar.xz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz"
+			]
+		}
+	},
+	"builddir": "grep-3.11"
+}

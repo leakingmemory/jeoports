@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"libxml2-2.11.4.tar.xz": {
+			"src": [
+				"https://download.gnome.org/sources/libxml2/2.11/libxml2-2.11.4.tar.xz"
+			]
+		}
+	},
+	"builddir": "libxml2-2.11.4"
+}

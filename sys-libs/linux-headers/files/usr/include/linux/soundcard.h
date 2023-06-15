@@ -1,0 +1,219 @@
+#ifndef LINUX_SOUNDCARD_H
+#define LINUX_SOUNDCARD_H
+
+#include <stdint.h>
+
+struct copr_buffer {
+	int command;
+	int flags;
+	int len;
+	int offs;
+	unsigned char data[4000];
+};
+
+struct copr_debug_buf {
+	int command;
+	int parm1;
+	int parm2;
+	int flags;
+	int len;
+};
+
+struct copr_msg {
+	int len;
+	unsigned char data[4000];
+};
+
+struct midi_info {
+	char name[30];
+	int device;
+	unsigned int capabilities;
+	int dev_type;
+	int dummies[18];
+};
+
+typedef unsigned char sbi_instr_data[32];
+
+struct sbi_instrument {
+	unsigned short key;
+	short device;
+	int channel;
+	sbi_instr_data operators;
+};
+
+struct seq_event_rec {
+	unsigned char arr[8];
+};
+
+struct synth_info {
+	char name[30];
+	int device;
+	int synth_type;
+	int synth_subtype;
+	int perc_mode;
+	int nr_voices;
+	int nr_drums;
+	int instr_bank_size;
+	unsigned int capabilities;
+	int dummies[19];
+};
+
+struct audio_buf_info {
+	int fragments;
+	int fragstotal;
+	int fragsize;
+	int bytes;
+};
+
+#ifndef _SIOWR
+#define _SIOWR _IOWR
+#endif
+#ifndef _SIOR
+#define _SIOR _IOR
+#endif
+#ifndef _SIOW
+#define _SIOW _IOW
+#endif
+#ifndef _SIO
+#define _SIO _IO
+#endif
+
+#define SNDCTL_COPR_HALT _SIOWR('C', 7, struct copr_debug_buf)
+#define SNDCTL_COPR_LOAD _SIOWR('C', 1, struct copr_buffer)
+#define SNDCTL_COPR_RCODE _SIOWR('C', 3, struct copr_debug_buf)
+#define SNDCTL_COPR_RCVMSG _SIOR('C', 9, struct copr_msg)
+#define SNDCTL_COPR_RDATA _SIOWR('C', 2, struct copr_debug_buf)
+#define SNDCTL_COPR_RESET _SIO('C', 0)
+#define SNDCTL_COPR_RUN _SIOWR('C', 6, struct copr_debug_buf)
+#define SNDCTL_COPR_SENDMSG _SIOWR('C', 8, struct copr_msg)
+#define SNDCTL_COPR_WCODE _SIOW('C', 5, struct copr_debug_buf)
+#define SNDCTL_COPR_WDATA _SIOW('C', 4, struct copr_debug_buf)
+#define SOUND_PCM_READ_BITS _SIOR('P', 5, int)
+#define SOUND_PCM_READ_CHANNELS _SIOR('P', 6, int)
+#define SOUND_PCM_READ_FILTER _SIOR('P', 7, int)
+#define SOUND_PCM_READ_RATE _SIOR('P', 2, int)
+#define SNDCTL_DSP_CHANNELS _SIOWR('P', 6, int)
+#define SOUND_PCM_WRITE_CHANNELS SNDCTL_DSP_CHANNELS
+#define SOUND_PCM_WRITE_FILTER _SIOWR('P', 7, int)
+
+#define SNDCTL_DSP_GETBLKSIZE _SIOWR('P', 4, int)
+#define SNDCTL_DSP_GETFMTS _SIOR('P', 11, int)
+#define SNDCTL_DSP_NONBLOCK _SIO('P', 14)
+#define SNDCTL_DSP_POST _SIO('P', 8)
+#define SNDCTL_DSP_RESET _SIO('P', 0)
+#define SNDCTL_DSP_SETFMT _SIOWR('P', 5, int)
+#define SNDCTL_DSP_SETFRAGMENT _SIOWR('P', 10, int)
+#define SNDCTL_DSP_SPEED _SIOWR('P', 2, int)
+#define SNDCTL_DSP_STEREO _SIOWR('P', 3, int)
+#define SNDCTL_DSP_SUBDIVIDE _SIOWR('P', 9, int)
+#define SNDCTL_DSP_SYNC _SIO('P', 1)
+#define SNDCTL_FM_4OP_ENABLE _SIOW('Q', 15, int)
+#define SNDCTL_FM_LOAD_INSTR _SIOW('Q', 7, struct sbi_instrument)
+#define SNDCTL_MIDI_INFO _SIOWR('Q', 12, struct midi_info)
+#define SNDCTL_MIDI_PRETIME _SIOWR('m', 0, int)
+#define SNDCTL_SEQ_CTRLRATE _SIOWR('Q', 3, int)
+#define SNDCTL_SEQ_GETINCOUNT _SIOR('Q', 5, int)
+#define SNDCTL_SEQ_GETOUTCOUNT _SIOR('Q', 4, int)
+#define SNDCTL_SEQ_NRMIDIS _SIOR('Q', 11, int)
+#define SNDCTL_SEQ_NRSYNTHS _SIOR('Q', 10, int)
+#define SNDCTL_SEQ_OUTOFBAND _SIOW('Q', 18, struct seq_event_rec)
+#define SNDCTL_SEQ_PANIC _SIO('Q', 17)
+#define SNDCTL_SEQ_PERCMODE _SIOW('Q', 6, int)
+#define SNDCTL_SEQ_RESET _SIO('Q', 0)
+#define SNDCTL_SEQ_RESETSAMPLES _SIOW('Q', 9, int)
+#define SNDCTL_SEQ_SYNC _SIO('Q', 1)
+#define SNDCTL_SEQ_TESTMIDI _SIOW('Q', 8, int)
+#define SNDCTL_SEQ_THRESHOLD _SIOW('Q', 13, int)
+#define SNDCTL_SYNTH_INFO _SIOWR('Q', 2, struct synth_info)
+#define SNDCTL_SYNTH_MEMAVL _SIOWR('Q', 14, int)
+#define SNDCTL_TMR_CONTINUE _SIO('T', 4)
+#define SNDCTL_TMR_METRONOME _SIOW('T', 7, int)
+#define SNDCTL_TMR_SELECT _SIOW('T', 8, int)
+#define SNDCTL_TMR_SOURCE _SIOWR('T', 6, int)
+#define SNDCTL_TMR_START _SIO('T', 2)
+#define SNDCTL_TMR_TEMPO _SIOWR('T', 5, int)
+#define SNDCTL_TMR_TIMEBASE _SIOWR('T', 1, int)
+#define SNDCTL_TMR_STOP _SIO('T', 3)
+
+#define SNDCTL_DSP_GETISPACE _SIOR('P', 13, struct audio_buf_info)
+#define SNDCTL_DSP_GETOSPACE _SIOR('P', 12, struct audio_buf_info)
+
+#define MIXER_READ(dev) _SIOR('M', dev, int)
+#define MIXER_WRITE(dev) _SIOWR('M', dev, int)
+
+#define SOUND_MIXER_ALTPCM 10
+#define SOUND_MIXER_BASS 1
+#define SOUND_MIXER_CAPS 0xfc
+#define SOUND_MIXER_CD 8
+#define SOUND_MIXER_DEVMASK 0xfe
+#define SOUND_MIXER_NONE 31
+#define SOUND_MIXER_ENHANCE SOUND_MIXER_NONE
+#define SOUND_MIXER_IGAIN 12
+#define SOUND_MIXER_IMIX 9
+#define SOUND_MIXER_LINE 6
+#define SOUND_MIXER_LINE1 14
+#define SOUND_MIXER_LINE2 15
+#define SOUND_MIXER_LINE3 16
+#define SOUND_MIXER_LOUD SOUND_MIXER_NONE
+#define SOUND_MIXER_MIC 7
+#define SOUND_MIXER_MUTE SOUND_MIXER_NONE
+#define SOUND_MIXER_OGAIN 13
+#define SOUND_MIXER_PCM 4
+#define SOUND_MIXER_RECLEV 11
+#define SOUND_MIXER_RECMASK 0xfd
+#define SOUND_MIXER_RECSRC 0xff
+#define SOUND_MIXER_SPEAKER 5
+#define SOUND_MIXER_STEREODEVS 0xfb
+#define SOUND_MIXER_SYNTH 3
+#define SOUND_MIXER_TREBLE 2
+#define SOUND_MIXER_VOLUME 0
+#define SOUND_MIXER_READ_ALTPCM MIXER_READ(SOUND_MIXER_ALTPCM)
+#define SOUND_MIXER_READ_BASS MIXER_READ(SOUND_MIXER_BASS)
+#define SOUND_MIXER_READ_CAPS MIXER_READ(SOUND_MIXER_CAPS)
+#define SOUND_MIXER_READ_CD MIXER_READ(SOUND_MIXER_CD)
+#define SOUND_MIXER_READ_DEVMASK MIXER_READ(SOUND_MIXER_DEVMASK)
+#define SOUND_MIXER_READ_ENHANCE MIXER_READ(SOUND_MIXER_ENHANCE)
+#define SOUND_MIXER_READ_IGAIN MIXER_READ(SOUND_MIXER_IGAIN)
+#define SOUND_MIXER_READ_IMIX MIXER_READ(SOUND_MIXER_IMIX)
+#define SOUND_MIXER_READ_LINE MIXER_READ(SOUND_MIXER_LINE)
+#define SOUND_MIXER_READ_LINE1 MIXER_READ(SOUND_MIXER_LINE1)
+#define SOUND_MIXER_READ_LINE2 MIXER_READ(SOUND_MIXER_LINE2)
+#define SOUND_MIXER_READ_LINE3 MIXER_READ(SOUND_MIXER_LINE3)
+#define SOUND_MIXER_READ_LOUD MIXER_READ(SOUND_MIXER_LOUD)
+#define SOUND_MIXER_READ_MIC MIXER_READ(SOUND_MIXER_MIC)
+#define SOUND_MIXER_READ_MUTE MIXER_READ(SOUND_MIXER_MUTE)
+#define SOUND_MIXER_READ_OGAIN MIXER_READ(SOUND_MIXER_OGAIN)
+#define SOUND_MIXER_READ_PCM MIXER_READ(SOUND_MIXER_PCM)
+#define SOUND_MIXER_READ_RECLEV MIXER_READ(SOUND_MIXER_RECLEV)
+#define SOUND_MIXER_READ_RECMASK MIXER_READ(SOUND_MIXER_RECMASK)
+#define SOUND_MIXER_READ_RECSRC MIXER_READ(SOUND_MIXER_RECSRC)
+#define SOUND_MIXER_READ_SPEAKER MIXER_READ(SOUND_MIXER_SPEAKER)
+#define SOUND_MIXER_READ_STEREODEVS MIXER_READ(SOUND_MIXER_STEREODEVS)
+#define SOUND_MIXER_READ_SYNTH MIXER_READ(SOUND_MIXER_SYNTH)
+#define SOUND_MIXER_READ_TREBLE MIXER_READ(SOUND_MIXER_TREBLE)
+#define SOUND_MIXER_READ_VOLUME MIXER_READ(SOUND_MIXER_VOLUME)
+
+#define SOUND_MIXER_WRITE_ALTPCM MIXER_WRITE(SOUND_MIXER_ALTPCM)
+#define SOUND_MIXER_WRITE_BASS MIXER_WRITE(SOUND_MIXER_BASS)
+#define SOUND_MIXER_WRITE_CD MIXER_WRITE(SOUND_MIXER_CD)
+#define SOUND_MIXER_WRITE_ENHANCE MIXER_WRITE(SOUND_MIXER_ENHANCE)
+#define SOUND_MIXER_WRITE_IGAIN MIXER_WRITE(SOUND_MIXER_IGAIN)
+#define SOUND_MIXER_WRITE_IMIX MIXER_WRITE(SOUND_MIXER_IMIX)
+#define SOUND_MIXER_WRITE_LINE MIXER_WRITE(SOUND_MIXER_LINE)
+#define SOUND_MIXER_WRITE_LINE1 MIXER_WRITE(SOUND_MIXER_LINE1)
+#define SOUND_MIXER_WRITE_LINE2 MIXER_WRITE(SOUND_MIXER_LINE2)
+#define SOUND_MIXER_WRITE_LINE3 MIXER_WRITE(SOUND_MIXER_LINE3)
+#define SOUND_MIXER_WRITE_LOUD MIXER_WRITE(SOUND_MIXER_LOUD)
+#define SOUND_MIXER_WRITE_MIC MIXER_WRITE(SOUND_MIXER_MIC)
+#define SOUND_MIXER_WRITE_MUTE MIXER_WRITE(SOUND_MIXER_MUTE)
+#define SOUND_MIXER_WRITE_OGAIN MIXER_WRITE(SOUND_MIXER_OGAIN)
+#define SOUND_MIXER_WRITE_PCM MIXER_WRITE(SOUND_MIXER_PCM)
+#define SOUND_MIXER_WRITE_RECLEV MIXER_WRITE(SOUND_MIXER_RECLEV)
+#define SOUND_MIXER_WRITE_RECSRC MIXER_WRITE(SOUND_MIXER_RECSRC)
+#define SOUND_MIXER_WRITE_SPEAKER MIXER_WRITE(SOUND_MIXER_SPEAKER)
+#define SOUND_MIXER_WRITE_SYNTH MIXER_WRITE(SOUND_MIXER_SYNTH)
+#define SOUND_MIXER_WRITE_TREBLE MIXER_WRITE(SOUND_MIXER_TREBLE)
+#define SOUND_MIXER_WRITE_VOLUME MIXER_WRITE(SOUND_MIXER_VOLUME)
+
+
+#endif
