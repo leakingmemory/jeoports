@@ -1,0 +1,7 @@
+#ifndef LINUX_LIMITS_H
+#define LINUX_LIMITS_H
+
+#define XATTR_LIST_MAX 65536
+#define XATTR_SIZE_MAX 65536
+
+#endif

@@ -1,0 +1,13 @@
+{
+	"distfiles": {
+		"Python-3.11.4.tar.xz": {
+			"src": [
+				"https://www.python.org/ftp/python/3.11.4/Python-3.11.4.tar.xz"
+			]
+		}
+	},
+	"builddir": "Python-3.11.4",
+	"nosysroot": {
+		"ldflags": " --rtlib=compiler-rt "
+	}
+}
