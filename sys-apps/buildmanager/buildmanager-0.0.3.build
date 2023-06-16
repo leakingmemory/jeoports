@@ -1,13 +1,13 @@
 {
 	"distfiles": {
-		"buildmanager-0.0.1.tar.gz": {
+		"buildmanager-0.0.3.tar.gz": {
 			"src": [
-				"https://github.com/leakingmemory/buildmanager/archive/refs/tags/0.0.1.tar.gz"
+				"https://github.com/leakingmemory/buildmanager/archive/refs/tags/0.0.3.tar.gz"
 			]
 		}
 	},
 	"tooling": "cmake",
-	"builddir": "buildmanager-0.0.1",
+	"builddir": "buildmanager-0.0.3",
 	"requiresClang": true,
 	"sysroot": {
 		"cmake": "{SYSROOT}/usr/bin/cmake",
