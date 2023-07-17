@@ -1,0 +1,11 @@
+--- a/glib/gthread-posix.c	2023-05-23 12:55:59.000000000 +0200
++++ b/glib/gthread-posix.c	2023-07-17 06:57:20.922688283 +0200
+@@ -60,6 +60,8 @@
+ #include <sys/time.h>
+ #include <unistd.h>
+ 
++#include <linux/posix_types.h>
++
+ #ifdef HAVE_PTHREAD_SET_NAME_NP
+ #include <pthread_np.h>
+ #endif

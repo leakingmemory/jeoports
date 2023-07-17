@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"pcre2-10.42.tar.gz": {
+			"src": [
+				"https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz"
+			]
+		}
+	},
+	"builddir": "pcre2-10.42"
+}

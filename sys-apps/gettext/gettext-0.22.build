@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"gettext-0.22.tar.gz": {
+			"src": [
+				"https://ftp.gnu.org/pub/gnu/gettext/gettext-0.22.tar.gz"
+			]
+		}
+	},
+	"builddir": "gettext-0.22"
+}

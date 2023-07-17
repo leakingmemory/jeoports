@@ -6,5 +6,22 @@
 			]
 		}
 	},
-	"builddir": "openssl-3.1.0"
+	"builddir": "openssl-3.1.0",
+	"bdep": [
+		"dev-util/perl",
+		"dev-util/llvm+clang",
+		"app-shells/bash",
+		"sys-utils/coreutils"
+	],
+	"configure": {
+		"parameters": [
+			"--openssldir=/etc/ssl"
+		]
+	},
+	"nosysroot": {
+		"env": {
+			"CC": "sys-clang",
+			"CXX": "sys-clang++"
+		}
+	}
 }

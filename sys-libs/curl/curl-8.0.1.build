@@ -9,7 +9,17 @@
 	"builddir": "curl-8.0.1",
 	"configure": {
 		"parameters": [
-			"--with-openssl"
+			"--with-openssl",
+			"--with-ca-bundle=/etc/ssl/ca-bundle.crt"
 		]
-	}
+	},
+	"nosysroot": {
+		"env": {
+			"LIBS": " -lnghttp2 "
+		}
+	},
+	"bdep": [
+		"dev-util/llvm+clang",
+		"sys-apps/diffutils"
+	]
 }

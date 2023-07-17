@@ -8,8 +8,9 @@
 	},
 	"builddir": "libpsl-0.21.2",
 	"requiresClang": true,
-	"cxxflags": " -rtlib=compiler-rt -fuse-ld=lld ",
-	"ldflags": " -ldl ",
+	"cflags": " --rtlib=compiler-rt -fuse-ld=lld ",
+	"cxxflags": " --rtlib=compiler-rt -fuse-ld=lld ",
+	"ldflags": " --rtlib=compiler-rt -fuse-ld=lld ",
 	"configure": {
 		"parameters": [
 			"--disable-silent-rules",

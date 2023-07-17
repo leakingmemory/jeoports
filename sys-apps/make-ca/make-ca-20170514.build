@@ -1,0 +1,18 @@
+{
+	"distfiles": {
+		"make-ca.sh-20170514": {
+			"src": [
+				"https://anduin.linuxfromscratch.org/BLFS/other/make-ca.sh-20170514"
+			],
+			"type": "raw"
+		}
+	},
+	"tooling": "custom",
+	"install": {
+		"after": [
+			["mkdir", "-p", "usr/bin"],
+			["cp", "-vp", "{DISTFILES}/make-ca.sh-20170514", "usr/bin/make-ca.sh"],
+			["chmod", "+x", "usr/bin/make-ca.sh"]
+		]
+	}
+}

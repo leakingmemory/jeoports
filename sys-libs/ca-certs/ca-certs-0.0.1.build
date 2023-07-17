@@ -1,0 +1,19 @@
+{
+	"distfiles": {
+		"certdata-0.0.1.txt": {
+			"src": [
+				"https://hg.mozilla.org/releases/mozilla-release/raw-file/default/security/nss/lib/ckfw/builtins/certdata.txt"
+			],
+			"type": "raw"
+		}
+	},
+	"tooling": "custom",
+	"install": {
+		"after": [
+			["mkdir", "-p", "var/lib/certdata"],
+			["cp", "-vp", "{DISTFILES}/certdata-0.0.1.txt", "var/lib/certdata/certdata.txt"],
+			["mkdir", "-p", "etc"],
+			["make-ca.sh", "-C", "var/lib/certdata/certdata.txt", "-D", "{WORKDIR}/install"]
+		]
+	}
+}

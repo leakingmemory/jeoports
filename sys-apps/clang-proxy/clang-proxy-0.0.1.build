@@ -1,0 +1,11 @@
+{
+	"distfiles": {
+		"clang-proxy-0.0.1.tar.gz": {
+			"src": [
+				"https://github.com/leakingmemory/clang-proxy/archive/refs/tags/0.0.1.tar.gz"
+			]
+		}
+	},
+	"builddir": "clang-proxy-0.0.1",
+	"tooling": "cmake"
+}

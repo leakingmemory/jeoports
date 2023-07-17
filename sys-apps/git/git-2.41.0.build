@@ -1,0 +1,13 @@
+{
+	"distfiles": {
+		"git-2.41.0.tar.xz": {
+			"src": [
+				"https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.41.0.tar.xz"
+			]
+		}
+	},
+	"builddir": "git-2.41.0",
+	"bdep": [
+		"sys-apps/tcl"
+	]
+}

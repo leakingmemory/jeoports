@@ -12,5 +12,6 @@ typedef int64_t __kernel_long_t;
 
 typedef __kernel_long_t __kernel_off_t;
 typedef long long __kernel_loff_t;
+typedef __kernel_long_t __kernel_time_t;
 
 #endif

@@ -1,0 +1,22 @@
+{
+	"distfiles": {
+		"meson-1.1.1.tar.gz": {
+			"src": [
+				"https://github.com/mesonbuild/meson/releases/download/1.1.1/meson-1.1.1.tar.gz"
+			]
+		}
+	},
+	"tooling": "custom",
+	"builddir": "meson-1.1.1",
+	"build": {
+		"before": [
+			["./packaging/create_zipapp.py", "--outfile", "meson", "--interpreter", "/usr/bin/env python3", "."]
+		]
+	},
+	"install": {
+		"after": [
+			["mkdir", "-p", "usr/bin"],
+			["cp", "-vp", "{BUILDDIR}/meson", "usr/bin/meson"]
+		]
+	}
+}

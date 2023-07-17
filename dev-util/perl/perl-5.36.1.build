@@ -1,0 +1,18 @@
+{
+	"distfiles": {
+		"perl-5.36.1.tar.gz": {
+			"src": [
+				"https://www.cpan.org/src/5.0/perl-5.36.1.tar.gz"
+			]
+		}
+	},
+	"builddir": "perl-5.36.1",
+	"configure": {
+		"defaultParameters": false,
+		"parameters": [
+			"-d",
+			"-A", "ldflags= -Wl,-dynamic-linker=/lib/libc.so ",
+			"-A", "ccflags= -D_GNU_SOURCE "
+		]
+	}
+}

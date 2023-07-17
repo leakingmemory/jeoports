@@ -1,0 +1,33 @@
+{
+	"distfiles": {
+		"ninja-1.11.1.tar.gz": {
+			"src": [
+				"https://github.com/ninja-build/ninja/archive/refs/tags/v1.11.1.tar.gz"
+			]
+		}
+	},
+	"tooling": "custom",
+	"builddir": "ninja-1.11.1",
+	"configure": {
+		"before": [
+			["./configure.py", "--bootstrap"]
+		]
+	},
+	"build": {
+		"before": [
+			["mkdir", "build-cmake"],
+			["cmake", "-DCMAKE_INSTALL_PREFIX=/usr", "-Bbuild-cmake"],
+			["cmake", "--build", "build-cmake"]
+		]
+	},
+	"install": {
+		"after": [
+			["cd", "{BUILDDIR}/build-cmake"],
+			["make", "DESTDIR=../../install", "install"]
+		]
+	},
+	"bdep": [
+		"dev-util/llvm+clang",
+		"dev-util/cmake"
+	]
+}

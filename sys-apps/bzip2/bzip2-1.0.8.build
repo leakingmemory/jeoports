@@ -1,0 +1,25 @@
+{
+	"distfiles": {
+		"bzip2-1.0.8.tar.gz": {
+			"src": [
+				"https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz"
+			]
+		}
+	},
+	"builddir": "bzip2-1.0.8",
+	"configure": {
+		"before": [
+			["sh", "-c", "echo '#!/bin/sh' > configure"],
+			["chmod", "+x", "configure"]
+		]
+	},
+	"nosysroot": {
+		"env": {
+			"CC": "sys-clang",
+			"CXX": "sys-clang++"
+		}
+	},
+	"patches": [
+		"sys-clang.patch"
+	]
+}

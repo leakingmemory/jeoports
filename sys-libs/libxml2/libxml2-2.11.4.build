@@ -6,5 +6,9 @@
 			]
 		}
 	},
-	"builddir": "libxml2-2.11.4"
+	"builddir": "libxml2-2.11.4",
+	"bdep": [
+		"dev-util/python",
+		"sys-apps/pkg-config"
+	]
 }

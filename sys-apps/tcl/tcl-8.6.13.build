@@ -1,0 +1,15 @@
+{
+	"distfiles": {
+		"tcl8.6.13-src.tar.gz": {
+			"src": [
+				"http://prdownloads.sourceforge.net/tcl/tcl8.6.13-src.tar.gz"
+			]
+		}
+	},
+	"builddir": "tcl8.6.13/unix",
+	"install": {
+		"after": [
+			["ln", "-s", "/usr/bin/tclsh8.6", "usr/bin/tclsh"]
+		]
+	}
+}
