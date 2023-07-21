@@ -20,7 +20,7 @@
 		"sys-libs/curl/8.0.1",
 		"sys-libs/zlib/1.2.13",
 		"dev-util/cmake/3.26.2",
-		"sys-apps/buildmanager/0.0.12",
+		"sys-apps/buildmanager/0.0.16",
 		"sys-libs/zstd/1.5.5",
 		"sys-apps/xz/5.4.3",
 		"sys-libs/libxml2/2.11.4",

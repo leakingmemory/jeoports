@@ -1,0 +1,13 @@
+{
+	"distfiles": {
+		"autoconf-2.71.tar.xz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/autoconf/autoconf-2.71.tar.xz"
+			]
+		}
+	},
+	"builddir": "autoconf-2.71",
+	"bdep": [
+		"dev-util/m4"
+	]
+}
