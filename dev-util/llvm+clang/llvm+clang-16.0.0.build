@@ -47,6 +47,9 @@
 			"LLVM_EXE_LINKER_FLAGS": " -Wl,-nostdlib -Wl,-lc++ -Wl,-lc -Wl,-lrt -Wl,-lunwind --rtlib=compiler-rt -fuse-ld=lld -Wl,{SYSROOT}/lib/crti.o -Wl,{SYSROOT}/lib/crt1.o -Wl,{SYSROOT}/lib/crtn.o "
 		}
 	},
+	"nosysroot": {
+		"ldflags": " -Wl,-lunwind "
+	},
 	"patches": [
 		"patch-exe-linker-flags.patch"
 	]
