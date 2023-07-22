@@ -19,5 +19,8 @@
 			]
 		}
 	},
-	"prefix": "/"
+	"prefix": "/",
+	"patches": [
+		"tparam-unistd.patch"
+	]
 }
