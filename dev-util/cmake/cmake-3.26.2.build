@@ -16,5 +16,15 @@
 	},
 	"sysroot": {
 		"ldflags": " -Wl,-nostdlib -nostdlib -Wl,-lc++ -Wl,-lc -Wl,-lrt -Wl,-lunwind --rtlib=compiler-rt -fuse-ld=lld -Wl,{SYSROOT}/lib/crti.o -Wl,{SYSROOT}/lib/crt1.o -Wl,{SYSROOT}/lib/crtn.o "
-	}
+	},
+	"chownSrc": [
+		".clang-tidy",
+		"Tests/.NoDartCoverage",
+		"Utilities/.clang-tidy",
+		"Tests/FindPackageModeMakefileTest/main.cpp",
+		"Tests/CTestTestStopTime/GetDate.cmake"
+	],
+	"bdep": [
+		"sys-libs/ncurses"
+	]
 }

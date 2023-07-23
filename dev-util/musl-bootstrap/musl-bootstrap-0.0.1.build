@@ -48,6 +48,8 @@
 		"sys-libs/nghttp2/1.52.0",
 		"sys-libs/libidn2/2.3.4",
 		"sys-libs/curl/8.0.1",
-		"sys-libs/zlib/1.2.13"
+		"sys-libs/zlib/1.2.13",
+		"sys-libs/ncurses/6.4",
+		"dev-util/cmake/3.26.2"
 	]
 }
