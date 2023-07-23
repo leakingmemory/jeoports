@@ -25,5 +25,8 @@
 				"--disable-shared"
 			]
 		}
-	}
+	},
+	"bdep": [
+		"sys-libs/libicu"
+	]
 }

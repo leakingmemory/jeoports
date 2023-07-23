@@ -11,8 +11,14 @@
 		"defaultParameters": false,
 		"parameters": [
 			"-d",
+			"-e",
 			"-A", "ldflags= -Wl,-dynamic-linker=/lib/libc.so ",
 			"-A", "ccflags= -D_GNU_SOURCE "
+		]
+	},
+	"install": {
+		"after": [
+			["/bin/bash", "-c", "rm -f *.0"]
 		]
 	}
 }

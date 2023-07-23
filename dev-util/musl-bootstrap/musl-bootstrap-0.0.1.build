@@ -34,5 +34,14 @@
 		"sys-apps/gawk/5.2.2",
 		"sys-apps/grep/3.11",
 		"dev-util/llvm+clang/16.0.0"
+	],
+	"rebuild": [
+		"sys-libs/musl/1.2.3",
+		"dev-util/python/3.11.4",
+		"sys-libs/llvm-libcpp/16.0.0",
+		"sys-libs/libicu/73.1",
+		"sys-libs/libpsl/0.21.2",
+		"dev-util/perl/5.36.1",
+		"sys-libs/openssl/3.1.0"
 	]
 }

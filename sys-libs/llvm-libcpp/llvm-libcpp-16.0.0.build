@@ -31,5 +31,8 @@
 	],
 	"sysroot": {
 		"ldflags": "-nostdlib"
-	}
+	},
+	"bdep": [
+		"dev-util/python"
+	]
 }
