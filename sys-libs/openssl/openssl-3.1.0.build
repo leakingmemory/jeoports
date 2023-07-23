@@ -11,7 +11,8 @@
 		"dev-util/perl",
 		"dev-util/llvm+clang",
 		"app-shells/bash",
-		"sys-utils/coreutils"
+		"sys-utils/coreutils",
+		"sys-apps/clang-proxy"
 	],
 	"configure": {
 		"parameters": [

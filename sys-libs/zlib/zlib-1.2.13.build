@@ -6,5 +6,9 @@
 			]
 		}
 	},
-	"builddir": "zlib-1.2.13"
+	"builddir": "zlib-1.2.13",
+	"chownSrc": [
+		"zconf.h",
+		"Makefile"
+	]
 }
