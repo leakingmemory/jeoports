@@ -6,10 +6,23 @@
 			]
 		}
 	},
+	"extract": {
+		"after": [
+			["chown", "{USER}:{GROUP}", "glib-2.76.3"],
+			["chown", "{USER}:{GROUP}", "glib-2.76.3/subprojects"]
+		]
+	},
+	"configure": {
+		"before": [
+		]
+	},
 	"builddir": "glib-2.76.3",
 	"tooling": "meson",
 	"bdep": [
 		"dev-util/ninja"
+	],
+	"rdep": [
+		"sys-libs/libpcre2/10.42"
 	],
 	"nosysroot": {
 		"env": {

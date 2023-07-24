@@ -28,6 +28,7 @@
 	},
 	"bdep": [
 		"dev-util/llvm+clang",
-		"dev-util/cmake"
+		"dev-util/cmake",
+		"dev-util/python"
 	]
 }

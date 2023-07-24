@@ -8,6 +8,7 @@
 	},
 	"builddir": "git-2.41.0",
 	"bdep": [
-		"sys-apps/tcl"
+		"sys-apps/tcl",
+		"sys-apps/gettext"
 	]
 }

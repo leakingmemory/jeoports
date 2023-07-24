@@ -21,5 +21,9 @@
 	},
 	"patches": [
 		"sys-clang.patch"
+	],
+	"bdep": [
+		"sys-apps/clang-proxy",
+		"sys-apps/diffutils"
 	]
 }

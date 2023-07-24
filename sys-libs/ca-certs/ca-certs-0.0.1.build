@@ -15,5 +15,8 @@
 			["mkdir", "-p", "etc"],
 			["make-ca.sh", "-C", "var/lib/certdata/certdata.txt", "-D", "{WORKDIR}/install"]
 		]
-	}
+	},
+	"bdep": [
+		"sys-apps/make-ca"
+	]
 }

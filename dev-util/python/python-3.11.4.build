@@ -9,5 +9,10 @@
 	"builddir": "Python-3.11.4",
 	"nosysroot": {
 		"ldflags": " --rtlib=compiler-rt "
+	},
+	"install": {
+		"after": [
+			["ln", "-s", "/usr/bin/python3", "usr/bin/python"]
+		]
 	}
 }
