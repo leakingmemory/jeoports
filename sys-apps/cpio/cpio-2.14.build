@@ -18,5 +18,9 @@
 	"chownSrc": [
 		"config.h.in",
 		"doc/stamp-vti"
+	],
+	"bdep": [
+		"dev-util/autoconf",
+		"dev-util/automake"
 	]
 }
