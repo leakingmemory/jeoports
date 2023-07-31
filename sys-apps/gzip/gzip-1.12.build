@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "gzip-1.12"
+	"builddir": "gzip-1.12",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

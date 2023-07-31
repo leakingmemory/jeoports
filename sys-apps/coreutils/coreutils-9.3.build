@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "coreutils-9.3"
+	"builddir": "coreutils-9.3",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

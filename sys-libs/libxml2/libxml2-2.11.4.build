@@ -10,5 +10,10 @@
 	"bdep": [
 		"dev-util/python",
 		"sys-apps/pkg-config"
+	],
+	"rdep": [
+		"sys-libs/zlib",
+		"sys-apps/xz",
+		"sys-libs/musl"
 	]
 }

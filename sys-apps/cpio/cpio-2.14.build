@@ -22,5 +22,8 @@
 	"bdep": [
 		"dev-util/autoconf",
 		"dev-util/automake"
+	],
+	"rdep": [
+		"sys-libs/musl"
 	]
 }

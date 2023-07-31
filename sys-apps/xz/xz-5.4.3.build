@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "xz-5.4.3"
+	"builddir": "xz-5.4.3",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

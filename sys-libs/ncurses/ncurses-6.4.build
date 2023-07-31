@@ -14,5 +14,8 @@
 			"--with-shared",
 			"--with-termlib"
 		]
-	}
+	},
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

@@ -10,5 +10,8 @@
 	"chownSrc": [
 		"zconf.h",
 		"Makefile"
+	],
+	"rdep": [
+		"sys-libs/musl"
 	]
 }

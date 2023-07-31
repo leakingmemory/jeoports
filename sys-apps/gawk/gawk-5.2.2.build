@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "gawk-5.2.2"
+	"builddir": "gawk-5.2.2",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

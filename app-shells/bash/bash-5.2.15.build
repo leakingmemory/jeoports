@@ -22,5 +22,9 @@
 	"prefix": "/",
 	"patches": [
 		"tparam-unistd.patch"
+	],
+	"rdep": [
+		"sys-libs/musl",
+		"sys-libs/ncurses"
 	]
 }

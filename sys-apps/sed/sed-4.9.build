@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "sed-4.9"
+	"builddir": "sed-4.9",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "make-4.4.1"
+	"builddir": "make-4.4.1",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

@@ -21,5 +21,14 @@
 	"bdep": [
 		"dev-util/llvm+clang",
 		"sys-apps/diffutils"
+	],
+	"rdep": [
+		"sys-libs/libidn2",
+		"sys-libs/libpsl",
+		"sys-libs/openssl",
+		"sys-libs/zlib",
+		"sys-libs/zstd",
+		"sys-libs/nghttp2",
+		"sys-libs/musl"
 	]
 }

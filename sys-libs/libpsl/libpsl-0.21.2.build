@@ -28,5 +28,9 @@
 	},
 	"bdep": [
 		"sys-libs/libicu"
+	],
+	"rdep": [
+		"sys-libs/musl",
+		"sys-libs/libicu"
 	]
 }

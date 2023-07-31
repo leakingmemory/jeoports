@@ -6,5 +6,9 @@
 			]
 		}
 	},
-	"builddir": "grep-3.11"
+	"builddir": "grep-3.11",
+	"rdep": [
+		"sys-libs/musl",
+		"sys-libs/libpcre2"
+	]
 }

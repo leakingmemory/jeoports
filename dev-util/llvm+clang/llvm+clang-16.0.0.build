@@ -52,5 +52,12 @@
 	},
 	"patches": [
 		"patch-exe-linker-flags.patch"
+	],
+	"rdep": [
+		"sys-libs/musl",
+		"sys-libs/llvm-libcpp",
+		"sys-libs/zlib",
+		"sys-libs/zstd",
+		"sys-libs/ncurses"
 	]
 }

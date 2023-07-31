@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "libidn2-2.3.4"
+	"builddir": "libidn2-2.3.4",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

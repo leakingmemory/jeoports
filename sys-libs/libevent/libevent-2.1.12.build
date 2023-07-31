@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "libevent-2.1.12-stable"
+	"builddir": "libevent-2.1.12-stable",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

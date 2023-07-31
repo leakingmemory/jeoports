@@ -6,5 +6,11 @@
 			]
 		}
 	},
-	"builddir": "gettext-0.22"
+	"builddir": "gettext-0.22",
+	"rdep": [
+		"sys-libs/libxml2",
+		"sys-libs/zlib",
+		"sys-apps/xz",
+		"sys-libs/musl"
+	]
 }

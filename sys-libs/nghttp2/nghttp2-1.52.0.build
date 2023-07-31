@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "nghttp2-1.52.0"
+	"builddir": "nghttp2-1.52.0",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

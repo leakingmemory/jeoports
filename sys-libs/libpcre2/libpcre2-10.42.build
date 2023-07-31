@@ -6,5 +6,8 @@
 			]
 		}
 	},
-	"builddir": "pcre2-10.42"
+	"builddir": "pcre2-10.42",
+	"rdep": [
+		"sys-libs/musl"
+	]
 }

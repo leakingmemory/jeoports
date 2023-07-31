@@ -34,5 +34,8 @@
 	},
 	"bdep": [
 		"dev-util/python"
+	],
+	"rdep": [
+		"sys-libs/musl"
 	]
 }

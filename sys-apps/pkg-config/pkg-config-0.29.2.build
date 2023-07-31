@@ -13,7 +13,8 @@
 			"GLIB_LIBS": " -lglib-2.0 "
 		}
 	},
-	"bdep": [
-		"sys-libs/glib"
+	"rdep": [
+		"sys-libs/glib",
+		"sys-libs/musl"
 	]
 }

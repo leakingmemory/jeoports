@@ -25,5 +25,8 @@
 	"bdep": [
 		"sys-apps/clang-proxy",
 		"sys-apps/diffutils"
+	],
+	"rdep": [
+		"sys-libs/musl"
 	]
 }

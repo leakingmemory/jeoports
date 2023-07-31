@@ -7,5 +7,9 @@
 		}
 	},
 	"builddir": "clang-proxy-0.0.1",
-	"tooling": "cmake"
+	"tooling": "cmake",
+	"rdep": [
+		"sys-libs/musl",
+		"sys-libs/llvm-libcpp"
+	]
 }

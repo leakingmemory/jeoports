@@ -22,7 +22,8 @@
 		"dev-util/ninja"
 	],
 	"rdep": [
-		"sys-libs/libpcre2/10.42"
+		"sys-libs/libpcre2/10.42",
+		"sys-libs/musl"
 	],
 	"nosysroot": {
 		"env": {

@@ -20,7 +20,7 @@
 		"sys-libs/curl/8.0.1",
 		"sys-libs/zlib/1.2.13",
 		"dev-util/cmake/3.26.2",
-		"sys-apps/buildmanager/0.0.18",
+		"sys-apps/buildmanager/0.0.20",
 		"sys-libs/zstd/1.5.5",
 		"sys-apps/xz/5.4.3",
 		"sys-libs/libxml2/2.11.4",
@@ -36,7 +36,7 @@
 		"dev-util/llvm+clang/16.0.0"
 	],
 	"rebuild": [
-		"dev-util/musl-root/0.0.1",
+		{"name": "dev-util/musl-root/0.0.1", "reinstall": false},
 		"sys-libs/musl/1.2.3",
 		"dev-util/python/3.11.4",
 		"sys-libs/llvm-libcpp/16.0.0",
@@ -52,7 +52,7 @@
 		"sys-libs/zlib/1.2.13",
 		"sys-libs/ncurses/6.4",
 		"dev-util/cmake/3.26.2",
-		"sys-apps/buildmanager/0.0.18",
+		"sys-apps/buildmanager/0.0.20",
 		"sys-libs/zstd/1.5.5",
 		"sys-apps/xz/5.4.3",
 		"dev-util/python/3.11.4",
@@ -88,7 +88,7 @@
 		"app-shells/bash/5.2.15"
 	],
 	"installBootstrap": [
-		"dev-util/musl-root/0.0.1",
+		{"name": "dev-util/musl-root/0.0.1", "register": false},
 		"sys-libs/musl/1.2.3",
 		"sys-libs/llvm-libcpp/16.0.0",
 		"sys-libs/libicu/73.1",
@@ -101,7 +101,7 @@
 		"sys-libs/curl/8.0.1",
 		"sys-libs/zlib/1.2.13",
 		"sys-libs/ncurses/6.4",
-		"sys-apps/buildmanager/0.0.18",
+		"sys-apps/buildmanager/0.0.20",
 		"sys-libs/zstd/1.5.5",
 		"sys-apps/xz/5.4.3",
 		"sys-libs/ca-certs/0.0.1",

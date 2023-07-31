@@ -25,6 +25,9 @@
 		"Tests/CTestTestStopTime/GetDate.cmake"
 	],
 	"bdep": [
+		"sys-libs/linux-headers"
+	],
+	"rdep": [
 		"sys-libs/ncurses"
 	]
 }
