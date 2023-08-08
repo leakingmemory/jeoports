@@ -1,0 +1,10 @@
+{
+	"tooling": "custom",
+	"rdep": [
+		"sys-apps/buildmanager",
+		"sys-apps/coreutils",
+		"sys-libs/ca-certs",
+		"app-shells/bash"
+	]
+}
+

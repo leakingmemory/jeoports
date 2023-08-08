@@ -1,0 +1,21 @@
+{
+	"distfiles": {
+		"musl-1.2.4.tar.gz": {
+			"src": [
+				"https://musl.libc.org/releases/musl-1.2.4.tar.gz"
+			]
+		}
+	},
+	"builddir": "musl-1.2.4",
+	"prefix": "/",
+	"nobootstrap": {
+		"ldflags": " /usr/lib/clang/16/lib/x86_64-unknown-linux-gnu/libclang_rt.builtins.a "
+	},
+	"configure": {
+		"parameters": [
+			"--exec-prefix=/usr",
+			"--includedir=/usr/include",
+			"--enable-debug"
+		]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"distfiles": {
+		"curl-8.2.1.tar.gz": {
+			"src": [
+				"https://curl.se/download/curl-8.2.1.tar.gz"
+			]
+		}
+	},
+	"builddir": "curl-8.2.1",
+	"configure": {
+		"parameters": [
+			"--with-openssl",
+			"--with-ca-bundle=/etc/ssl/ca-bundle.crt"
+		]
+	},
+	"nosysroot": {
+		"env": {
+			"LIBS": " -lnghttp2 "
+		}
+	},
+	"bdep": [
+		"dev-util/llvm+clang",
+		"sys-apps/diffutils"
+	],
+	"rdep": [
+		"sys-libs/libidn2",
+		"sys-libs/libpsl",
+		"sys-libs/openssl",
+		"sys-libs/zlib",
+		"sys-libs/zstd",
+		"sys-libs/nghttp2",
+		"sys-libs/musl"
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"tooling": "custom",
+	"rdep": [
+		"dev-util/cmake",
+		"dev-util/gmake",
+		"dev-util/llvm+clang",
+		"sys-apps/clang-proxy",
+		"sys-apps/gawk",
+		"sys-apps/gettext",
+		"sys-apps/gpatch",
+		"sys-apps/grep",
+		"sys-apps/pkg-config",
+		"sys-apps/sed"
+	]
+}
