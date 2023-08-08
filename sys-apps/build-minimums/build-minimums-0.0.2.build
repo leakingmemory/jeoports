@@ -10,6 +10,7 @@
 		"sys-apps/gpatch",
 		"sys-apps/grep",
 		"sys-apps/pkg-config",
-		"sys-apps/sed"
+		"sys-apps/sed",
+		"sys-apps/git"
 	]
 }
