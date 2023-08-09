@@ -1,0 +1,14 @@
+{
+	"distfiles": {
+		"less-633.tar.gz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/less/less-633.tar.gz"
+			]
+		}
+	},
+	"builddir": "less-633",
+	"rdep": [
+		"sys-libs/musl",
+		"sys-libs/ncurses"
+	]
+}

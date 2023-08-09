@@ -1,0 +1,22 @@
+{
+	"distfiles": {
+		"vim-9.0.tar.bz2": {
+			"src": [
+				"https://www.mirrorservice.org/pub/vim/unix/vim-9.0.tar.bz2"
+			]
+		}
+	},
+	"builddir": "vim90",
+	"configure": {
+		"parameters": [
+			"--disable-nls"
+		]
+	},
+	"bdep": [
+		"sys-apps/findutils"
+	],
+	"rdep": [
+		"sys-libs/musl",
+		"sys-libs/ncurses"
+	]
+}

@@ -12,7 +12,9 @@
 		"parameters": [
 			"--includedir=/usr/include",
 			"--with-shared",
-			"--with-termlib"
+			"--with-termlib",
+			"--with-pkg-config-libdir=/usr/lib/pkgconfig",
+			"--enable-pc-files"
 		]
 	},
 	"rdep": [

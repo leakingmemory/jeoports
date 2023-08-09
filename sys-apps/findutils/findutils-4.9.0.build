@@ -1,0 +1,10 @@
+{
+	"distfiles": {
+		"findutils-4.9.0.tar.xz": {
+			"src": [
+				"https://ftp.gnu.org/gnu/findutils/findutils-4.9.0.tar.xz"
+			]
+		}
+	},
+	"builddir": "findutils-4.9.0"
+}

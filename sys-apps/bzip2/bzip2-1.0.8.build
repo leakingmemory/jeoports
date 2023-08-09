@@ -22,6 +22,10 @@
 	"patches": [
 		"sys-clang.patch"
 	],
+	"installTargets": [
+		"PREFIX={WORKDIR}/install/usr",
+		"install"
+	],
 	"bdep": [
 		"sys-apps/clang-proxy",
 		"sys-apps/diffutils"

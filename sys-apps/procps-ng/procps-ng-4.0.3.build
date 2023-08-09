@@ -1,0 +1,23 @@
+{
+	"distfiles": {
+		"procps-ng-4.0.3.tar.xz": {
+			"src": [
+				"https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.3.tar.xz/download"
+			]
+		}
+	},
+	"builddir": "procps-ng-4.0.3",
+	"configure": {
+		"parameters": [
+			"--disable-w"
+		]
+	},
+	"bdep": [
+		"sys-apps/bzip2",
+		"sys-apps/pkg-config"
+	],
+	"rdep": [
+		"sys-libs/musl",
+		"sys-libs/ncurses"
+	]
+}
