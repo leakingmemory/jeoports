@@ -2,8 +2,8 @@
 	"builddir": "musl-bootstrap-0.0.1",
 	"tooling": "bootstrap",
 	"libc": "sys-libs/musl/1.2.4",
-	"libcppHeaderBuild": "sys-libs/llvm-libcpp-glibc/16.0.0",
-	"libcpp": "sys-libs/llvm-libcpp/16.0.0",
+	"libcppHeaderBuild": "sys-libs/llvm-libcpp-glibc/16.0.6",
+	"libcpp": "sys-libs/llvm-libcpp/16.0.6",
 	"static": [
 		"dev-util/musl-root/0.0.1",
 		"sys-libs/linux-headers/0.0.1",
@@ -33,13 +33,13 @@
 		"sys-apps/gpatch/2.7.6",
 		"sys-apps/gawk/5.2.2",
 		"sys-apps/grep/3.11",
-		"dev-util/llvm+clang/16.0.0"
+		"dev-util/llvm+clang/16.0.6"
 	],
 	"rebuild": [
 		{"name": "dev-util/musl-root/0.0.1", "reinstall": false},
 		"sys-libs/musl/1.2.4",
 		"dev-util/python/3.11.4",
-		"sys-libs/llvm-libcpp/16.0.0",
+		"sys-libs/llvm-libcpp/16.0.6",
 		"sys-libs/libicu/73.1",
 		"sys-libs/libpsl/0.21.2",
 		"dev-util/perl/5.36.1",
@@ -84,13 +84,13 @@
 		"sys-apps/gpatch/2.7.6",
 		"sys-apps/gawk/5.2.2",
 		"sys-apps/grep/3.11",
-		"dev-util/llvm+clang/16.0.0",
+		"dev-util/llvm+clang/16.0.6",
 		"app-shells/bash/5.2.15"
 	],
 	"installBootstrap": [
 		{"name": "dev-util/musl-root/0.0.1", "register": false},
 		"sys-libs/musl/1.2.4",
-		"sys-libs/llvm-libcpp/16.0.0",
+		"sys-libs/llvm-libcpp/16.0.6",
 		"sys-libs/libicu/73.1",
 		"sys-libs/libpsl/0.21.2",
 		"sys-apps/clang-proxy/0.0.1",
@@ -120,7 +120,7 @@
 		"sys-apps/gpatch/2.7.6",
 		"sys-apps/gawk/5.2.2",
 		"sys-apps/grep/3.11",
-		"dev-util/llvm+clang/16.0.0",
+		"dev-util/llvm+clang/16.0.6",
 		"app-shells/bash/5.2.15"
 	]
 }

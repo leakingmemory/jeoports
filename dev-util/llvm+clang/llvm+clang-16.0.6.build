@@ -1,19 +1,19 @@
 {
 	"distfiles": {
-		"llvm-project-16.0.0.src.tar.xz": {
+		"llvm-project-16.0.6.src.tar.xz": {
 			"src": [
-				"https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.0/llvm-project-16.0.0.src.tar.xz"
+				"https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.6/llvm-project-16.0.6.src.tar.xz"
 			]
 		}
 	},
-	"builddir": "llvm-project-16.0.0.src",
+	"builddir": "llvm-project-16.0.6.src",
 	"tooling": "cmake",
 	"cxxflags": " -D_LIBCPP_PROVIDES_DEFAULT_RUNE_TABLE ",
 	"requiresClang": true,
 	"configure": {
 		"defaultParameters": false,
 		"parameters": [
-			"-S", "../llvm-project-16.0.0.src/llvm",
+			"-S", "../llvm-project-16.0.6.src/llvm",
 			"-DCMAKE_INSTALL_PREFIX=/usr",
 			"-DCLANG_ENABLE_BOOTSTRAP=ON",
 			"-DLIBCXX_INCLUDE_BENCHMARKS=Off",
